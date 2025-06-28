@@ -1,0 +1,47 @@
+:root {
+  --primary-blue: #1c66a9;
+  --dark-blue: #1a2f58;
+  --light-blue: #61c7e6;
+  --highlight-yellow: #f9c521;
+  --background: #f3f4f8;
+  --accent-dark: #302319;
+}
+
+/* Fundo e textos */
+body {
+  background-color: var(--background);
+  color: var(--dark-blue);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Botões */
+.button-primary {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Destaques */
+.highlight {
+  background-color: var(--highlight-yellow);
+  color: var(--accent-dark);
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Links */
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

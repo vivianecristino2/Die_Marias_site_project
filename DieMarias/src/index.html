@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Die Marias – Deine Reinigungskraft</title>
+    <!-- Main stylesheet with Die Marias palette -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Hero / Header -->
+    <header style="background-color: var(--primary-blue); color: #fff; padding: 3rem 1rem; text-align: center;">
+      <h1 style="font-size: 3rem; margin: 0 0 0.5rem;">Die Marias</h1>
+      <p style="font-size: 1.25rem; font-weight: 500;">Deine Reinigungskraft</p>
+    </header>
+
+    <!-- About section -->
+    <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
+      <h2>Sauberkeit, auf die Sie sich verlassen können!</h2>
+      <p>
+        Wir sorgen dafür, dass Ihre Arbeitsräume nicht nur sauber, sondern auch einladend und hygienisch sind – zuverlässig, gründlich und individuell auf Ihre Bedürfnisse abgestimmt.
+      </p>
+      <span class="highlight">Faire Preise &amp; Flexible Zeiten</span>
+    </section>
+
+    <!-- Services -->
+    <section style="background-color: var(--light-blue); padding: 2rem 1rem; color: var(--dark-blue);">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="text-align: center;">Unsere Leistungen</h2>
+        <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+          <li>✅ Büroreinigung</li>
+          <li>✅ Tagungsräume</li>
+          <li>✅ Treppenhäuser</li>
+          <li>✅ Praxen nach Renovierung</li>
+          <li>✅ Gründliche Unterhaltsreinigung</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+   <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
+      <h2>Jetzt unverbindlich anfragen!</h2>
+      <p>☎️ +49 176 30330148</p>
+      <a href="mailto:kontakt@diemarias.de" class="button-primary">Kontakt per E‑Mail</a>
+      <a href="https://wa.me/4917630330148" class="button-primary" style="margin-left: 0.5rem;">WhatsApp schreiben</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer style="background-color: var(--dark-blue); color: #fff; text-align: center; padding: 1rem;">
+      &copy; <span id="year"></span> Die Marias – Alle Rechte vorbehalten.
+    </footer>
+
+    <script>
+      // Dynamisches Jahr im Footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
