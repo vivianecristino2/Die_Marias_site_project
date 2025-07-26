@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Die Marias – Deine Reinigungskraft</title>
-    <!-- Main stylesheet with Die Marias palette -->
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <!-- Hero / Header -->
-    <header style="background-color: var(--primary-blue); color: #fff; padding: 3rem 1rem; text-align: center;">
-      <h1 style="font-size: 3rem; margin: 0 0 0.5rem;">Die Marias</h1>
-      <p style="font-size: 1.25rem; font-weight: 500;">Deine Reinigungskraft</p>
-    </header>
+
+   <!-- Faixa azul retangular wide -->
+  <div class="faixa-header-diemarias">
+    <p>✨ Die Marias – Sua limpeza profissional em boas mãos!</p>
+  </div>
+
+
+  <!-- Imagem background meninas limpando -->
+  <div class="header-image"></div>
+</header>
 
     <!-- About section -->
     <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
@@ -21,6 +25,16 @@
         Wir sorgen dafür, dass Ihre Arbeitsräume nicht nur sauber, sondern auch einladend und hygienisch sind – zuverlässig, gründlich und individuell auf Ihre Bedürfnisse abgestimmt.
       </p>
       <span class="highlight">Faire Preise &amp; Flexible Zeiten</span>
+    </section>
+
+    <!-- Botão dinâmico -->
+    <section style="max-width: 900px; margin: 2rem auto; text-align: center;">
+      <button onclick="mostrarNachricht()" class="button-primary">
+        Warum Die Marias?
+      </button>
+      <p id="nachricht" style="display: none; margin-top: 1rem;">
+        🌟 Wir sind ein starkes Frauenteam, das sich mit Herz und Verantwortung um Ihr Umfeld kümmert!
+      </p>
     </section>
 
     <!-- Services -->
@@ -38,22 +52,23 @@
     </section>
 
     <!-- Call to Action -->
-   <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
+    <section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
       <h2>Jetzt unverbindlich anfragen!</h2>
       <p>☎️ +49 176 30330148</p>
       <a href="mailto:kontakt@diemarias.de" class="button-primary">Kontakt per E‑Mail</a>
       <a href="https://wa.me/4917630330148" class="button-primary" style="margin-left: 0.5rem;">WhatsApp schreiben</a>
     </section>
 
-
     <!-- Footer -->
     <footer style="background-color: var(--dark-blue); color: #fff; text-align: center; padding: 1rem;">
-      &copy; <span id="year"></span> Die Marias – Alle Rechte vorbehalten.
+      &copy; Die Marias – 2025
     </footer>
 
+    <!-- Script para mostrar mensagem -->
     <script>
-      // Dynamisches Jahr im Footer
-      document.getElementById("year").textContent = new Date().getFullYear();
+      function mostrarNachricht() {
+        document.getElementById("nachricht").style.display = "block";
+      }
     </script>
   </body>
 </html>

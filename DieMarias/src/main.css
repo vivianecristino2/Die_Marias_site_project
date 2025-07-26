@@ -6,12 +6,60 @@
   --background: #f3f4f8;
   --accent-dark: #302319;
 }
+.faixa-header-diemarias {
+  background-color: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
 
 /* Fundo e textos */
 body {
   background-color: var(--background);
   color: var(--dark-blue);
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-topo {
+  width: 100vw;       /* Ocupa 100% da largura da janela */
+  height: 100px;       /* Altura desejada */
+  object-fit: cover;   /* Cobre toda a área */
+  display: block;
+}
+/* Header com imagem */
+.header-image {
+  background: url('../images/headerCleaningTeam.png') no-repeat center center;
+  background-size: contain;
+  background-repeat: repeat;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+
+.header-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 /* Botões */
