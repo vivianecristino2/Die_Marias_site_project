@@ -93,3 +93,94 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+
+.footer-diemarias {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 1.5rem 1rem;
+  border-top: 2px solid #e0e0e0; /* linha separadora sutil */
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-social span {
+  margin-right: 0.5rem;
+}
+
+.footer-social a {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-social a:hover {
+  background-color: var(--highlight-yellow);
+  color: var(--accent-dark);
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Animação do telefone */
+.pulse {
+  animation: pulse-animation 1.5s infinite;
+}
+
+@keyframes pulse-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Botões de contato com destaque */
+.contact-btn {
+  background-color: var(--primary-blue);
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: var(--highlight-yellow);
+  color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
