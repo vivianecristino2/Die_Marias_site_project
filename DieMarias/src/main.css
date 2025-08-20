@@ -45,6 +45,56 @@ body {
   color: white;
 }
 
+.faixa-header-diemarias {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.faixa-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+}
+
+.frase-diemarias {
+  text-align: center;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.menu-faixa {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-faixa ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-faixa li a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.menu-faixa li a:hover {
+  color: var(--highlight-yellow);
+}
+
 
 .header-text {
   background-color: rgba(0, 0, 0, 0.5);
@@ -171,10 +221,15 @@ a:hover {
 /* Botões de contato com destaque */
 .contact-btn {
   background-color: var(--primary-blue);
-  padding: 0.7rem 1.4rem;
+  padding: 0.75rem 2rem;
   border-radius: 6px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
+  font-size: 1rem; /* aumenta a legibilidade */
+  border: none;
+  cursor: pointer;
+  white-space: nowrap; /* evita quebra de linha */
+  max-width: 100%; /* garante responsividade */
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -183,4 +238,227 @@ a:hover {
   color: var(--accent-dark);
   transform: translateY(-2px);
 }
+
+.area-servico {
+  background-color: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+}
+
+.area-servico h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.area-servico p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.servicos-icones {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: white;
+  color: var(--dark-blue);
+}
+
+.servicos-icones h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.servicos-icones h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.servicos-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.servico-box {
+  text-align: center;
+  max-width: 120px;
+}
+
+.servico-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.servico-box p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+.servico-box img[alt="Regular Cleaning"] {
+  height: 80px; /* ou ajuste conforme as outras */
+  width: auto;
+  transform: translateY(-6px); /* se ainda precisar alinhar */
+}
+
+/* 3 cards por tela */
+.carousel-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 56px;                 /* espaço para setas */
+}
+
+.carousel {
+  display: flex;
+  gap: 32px;                       /* usado também no JS */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.carousel::-webkit-scrollbar { display: none; }
+
+/* cada item = 1/3 da largura visível (considerando 2 gaps) */
+.carousel-item {
+  flex: 0 0 calc((100% - 2 * 32px) / 3);
+  scroll-snap-align: start;
+  position: relative;   /* <-- prende a legenda ao card */
+  overflow: hidden;     /* <-- impede a caixa preta de sair da foto */
+  border-radius: 14px;  /* combina com a imagem */
+}
+
+.carousel-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 14px;
+  display: block;       /* <-- remove “gap” embaixo da imagem */
+}
+
+/* Legenda centralizada dentro da imagem */
+/* Legenda abaixo da imagem, centralizada */
+.carousel-item > .carousel-caption {
+  position: static !important;   /* tira do overlay */
+  background: transparent !important;
+  color: var(--dark-blue) !important;
+  padding: 0 !important;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.carousel-item {
+  flex: 0 0 calc((100% - 2 * 32px) / 3);
+  scroll-snap-align: start;
+  position: relative;
+  overflow: visible;      /* <— era hidden */
+  border-radius: 14px;    /* borda da imagem continua abaixo */
+}
+
+.carousel-item > .carousel-caption span {
+  display: block;
+  font-size: 1.02rem;  /* um pouco maior que antes */
+  opacity: 0.95;
+}
+/* >>> AQUI o ajuste do corte no topo <<< */
+.carousel-img {
+  width: 100%;
+  height: 360px;                   /* aumente para 380/400 se quiser ainda maior */
+  object-fit: cover;               /* preenche sem distorcer */
+  object-position: top center;     /* prioriza a cabeça no enquadramento */
+  border-radius: 14px;
+}
+
+/* setas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px; height: 42px;
+  border: 0; border-radius: 10px;
+  background: var(--primary-blue);
+  color: #fff; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+}
+.arrow.left  { left: 8px;  }
+.arrow.right { right: 8px; }
+
+/* Seção de serviços com fundo azul */
+.faixa-servicos {
+  background: var(--light-blue);   /* sua cor da marca */
+  padding: 3rem 1rem 2.5rem;       /* dá corpo pra seção e evita margin collapse */
+}
+
+.servicos-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.faixa-servicos h2 {
+  margin: 0 0 1.5rem;              /* tira o margin-top padrão que causava o branco */
+  text-align: center;
+  color: var(--dark-blue);
+}
+/* Esconde a barra de rolagem (opcional) */
+#carousel::-webkit-scrollbar { display: none; }
+#carousel { scrollbar-width: none; }
+
+
+#mensagem {
+  display: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--dark-blue);
+}
+
+#mensagem.mostrar {
+  display: block;
+}
+
+  .language-selector { position: relative; z-index: 1000; }
+  #language-options { z-index: 1001; }
+
+  #language-btn {
+    background-color: #e0e7f1;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .arrow-down {
+    margin-left: 0.3rem;
+  }
+  .language-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 2.4rem;
+    background: white;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 10;
+  }
+  .language-dropdown li {
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .language-dropdown li:hover {
+    background-color: #f0f0f0;
+  }
 
