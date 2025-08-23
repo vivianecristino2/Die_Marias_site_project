@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,97 +11,130 @@
   </head>
 
   <body>
-    <!-- AGORA SIM: HEADER DENTRO DO BODY -->
+    <!-- HEADER -->
     <header style="background-color: var(--primary-blue); color: #fff; padding: 1rem 2rem; position: relative;">
-      <div style="text-align: center; font-weight: bold;">
-        ✨ Die Marias – Sua limpeza profissional em boas mãos!
+      <div style="text-align: center; font-weight: bold;" data-i18n="tagline">
+        ✨ Die Marias – Your professional cleaning in good hands!
       </div>
 
       <nav style="position: absolute; top: 50%; right: 2rem; transform: translateY(-50%); display: flex; align-items: center; gap: 1.5rem;">
-        <a href="#sobre" style="color: white; text-decoration: none;">Sobre</a>
-        <a href="#servicos" style="color: white; text-decoration: none;">Serviços</a>
-        <a href="#contato" style="color: white; text-decoration: none;">Contato</a>
+        <a href="#sobre"    style="color: white; text-decoration: none;" data-i18n="nav.about">About</a>
+        <a href="#servicos" style="color: white; text-decoration: none;" data-i18n="nav.services">Services</a>
+        <a href="#contato"  style="color: white; text-decoration: none;" data-i18n="nav.contact">Contact</a>
 
         <!-- Seletor de idioma -->
         <div class="language-selector" style="position: relative;">
           <button id="language-btn" style="background: white; color: black; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; cursor: pointer;">
-            PT <span style="margin-left: 5px;">▼</span>
+            EN <span style="margin-left: 5px;">▼</span>
           </button>
-          <ul id="language-options" style="display: none; position: absolute; top: 100%; right: 0; background: white; color: black; list-style: none; margin: 0; padding: 0.5rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border-radius: 5px;">
-            <li onclick="changeLanguage('pt')" style="padding: 0.5rem 1rem; cursor: pointer;">PT</li>
-            <li onclick="changeLanguage('en')" style="padding: 0.5rem 1rem; cursor: pointer;">EN</li>
-            <li onclick="changeLanguage('de')" style="padding: 0.5rem 1rem; cursor: pointer;">DE</li>
+          <ul id="language-options" style="display:none; position:absolute; top:100%; right:0; background:white; color:black; list-style:none; margin:0; padding:0.5rem 0; box-shadow:0 2px 5px rgba(0,0,0,0.2); border-radius:5px;">
+            <li data-lang="en" style="padding:0.5rem 1rem; cursor:pointer;">EN</li>
+            <li data-lang="pt" style="padding:0.5rem 1rem; cursor:pointer;">PT</li>
+            <li data-lang="de" style="padding:0.5rem 1rem; cursor:pointer;">DE</li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <!-- Imagem background meninas limpando -->
+    <!-- Imagem topo -->
     <div class="header-image"></div>
 
     <!-- Seção Sobre -->
     <section id="sobre" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
-      <h2>Limpeza em que você pode confiar!</h2>
-      <p>
-        Cuidamos para que seus ambientes de trabalho estejam sempre limpos, acolhedores e higiênicos – com confiabilidade, dedicação e adaptados às suas necessidades.
+      <h2 data-i18n="about.title">Cleaning you can trust!</h2>
+      <p data-i18n="about.text">
+        We make sure your workplaces are always clean, welcoming and hygienic — with reliability, dedication and tailored to your needs.
       </p>
-      <span class="highlight">Preços justos & Horários flexíveis</span>
+      <span class="highlight" data-i18n="about.badge">Fair Prices & Flexible Hours</span>
     </section>
 
-    <!-- Botão dinâmico em português -->
+    <!-- Botão + mensagem -->
     <section style="max-width: 900px; margin: 2rem auto; text-align: center;">
-  <button id="btn-porque" class="button-primary">
-    Por que escolher a Die Marias?
-  </button>
-  <p id="mensagem" style="display:none;">
-    🌟 Somos um time de mulheres determinadas que cuidam do seu espaço com carinho, excelência e responsabilidade!
-  </p>
-</section>
-
+      <button id="btn-porque" class="button-primary" data-i18n="about.whyBtn">Why choose Die Marias?</button>
+      <p id="mensagem" style="display:none;" data-i18n="about.whyMsg">
+        🌟 We’re a team of determined women who care for your space with care, excellence and responsibility!
+      </p>
+    </section>
 
     <!-- Serviços com carrossel -->
     <section id="servicos" class="faixa-servicos">
       <div class="servicos-container">
-        <h2 style="text-align: center;">Nossos Serviços</h2>
+        <h2 style="text-align: center;" data-i18n="services.title">Our Services</h2>
+
         <div class="carousel-wrapper">
           <button class="arrow left" onclick="scrollCarousel(-1)">&#10094;</button>
 
           <div class="carousel" id="carousel">
             <div class="carousel-item">
-              <img src="../images/escritorio.jpg" alt="Escritório" class="carousel-img" />
-              <p class="carousel-caption"><strong>Escritório</strong><br><span>Ambiente Produtivo</span></p>
+              <img src="../images/escritorio.jpg" alt="Office" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.office.title">Office</strong><br>
+                <span data-i18n="services.office.subtitle">Productive Environment</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/consultorio.jpg" alt="Consultório" class="carousel-img" />
-              <p class="carousel-caption"><strong>Consultórios</strong><br><span>Higiene Impecável</span></p>
+              <img src="../images/consultorio.jpg" alt="Clinic" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.clinic.title">Clinics</strong><br>
+                <span data-i18n="services.clinic.subtitle">Impeccable Hygiene</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/padaria.jpg" alt="Padaria" class="carousel-img" />
-              <p class="carousel-caption"><strong>Padarias</strong><br><span>Confiança Diária</span></p>
+              <img src="../images/padaria.jpg" alt="Bakery" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.bakery.title">Bakeries</strong><br>
+                <span data-i18n="services.bakery.subtitle">Daily Trust</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/restaurante.jpg" alt="Restaurante" class="carousel-img" />
-              <p class="carousel-caption"><strong>Restaurantes</strong><br><span>Brilho Seguro</span></p>
+              <img src="../images/restaurante.jpg" alt="Restaurant" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.restaurant.title">Restaurants</strong><br>
+                <span data-i18n="services.restaurant.subtitle">Safe Shine</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/comercio.jpg" alt="Comércio" class="carousel-img" />
-              <p class="carousel-caption"><strong>Comércios</strong><br><span>Primeira Impressão</span></p>
+              <img src="../images/comercio.jpg" alt="Retail" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.retail.title">Retail</strong><br>
+                <span data-i18n="services.retail.subtitle">First Impression</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/escadarias.jpg" alt="Escadarias" class="carousel-img" />
-              <p class="carousel-caption"><strong>Escadarias</strong><br><span>Detalhes Cuidados</span></p>
+              <img src="../images/escadarias.jpg" alt="Staircases" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.stairs.title">Staircases</strong><br>
+                <span data-i18n="services.stairs.subtitle">Cared Details</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/limpezaaposreforma.jpg" alt="Pós-reforma" class="carousel-img" />
-              <p class="carousel-caption"><strong>Pós-reformas</strong><br><span>Ambiente Renovado</span></p>
+              <img src="../images/limpezaaposreforma.jpg" alt="Post-renovation" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.postren.title">Post-renovation</strong><br>
+                <span data-i18n="services.postren.subtitle">Renewed Space</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/apartamento.jpg" alt="Apartamento" class="carousel-img" />
-              <p class="carousel-caption"><strong>Apartamentos</strong><br><span>Conforto Imediato</span></p>
+              <img src="../images/apartamento.jpg" alt="Apartments" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.apt.title">Apartments</strong><br>
+                <span data-i18n="services.apt.subtitle">Instant Comfort</span>
+              </p>
             </div>
+
             <div class="carousel-item">
-              <img src="../images/residencias.jpg" alt="Residência" class="carousel-img" />
-              <p class="carousel-caption"><strong>Residências</strong><br><span>Bem-estar Diário</span></p>
+              <img src="../images/residencias.jpg" alt="Homes" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.home.title">Homes</strong><br>
+                <span data-i18n="services.home.subtitle">Everyday Well-being</span>
+              </p>
             </div>
           </div>
 
@@ -112,7 +145,7 @@
 
     <!-- Call to Action -->
     <section id="contato" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
-      <h2 id="contato-titulo">Faça uma consulta sem compromisso agora!</h2>
+      <h2 id="contato-titulo" data-i18n="cta.title">Request your free consultation now!</h2>
       <p>
         <span style="color: #d63384; font-size: 1.2rem; margin-right: 0.5rem;">
           <i class="fas fa-phone-alt pulse"></i>
@@ -120,41 +153,113 @@
         <strong style="font-size: 1.1rem;">+49 176 30330148</strong>
       </p>
       <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
-        <a href="mailto:kontakt@diemarias.de" class="button-primary contact-btn">E‑mail</a>
-        <a href="https://wa.me/4917630330148" class="button-primary contact-btn">WhatsApp</a>
+        <a href="mailto:kontakt@diemarias.de" class="button-primary contact-btn" data-i18n="cta.email">E‑mail</a>
+        <a href="https://wa.me/4917630330148" class="button-primary contact-btn" data-i18n="cta.whatsapp">WhatsApp</a>
       </div>
     </section>
 
     <!-- Ícones de serviços -->
     <section class="servicos-icones">
-      <h3>Nossos Serviços de Limpeza</h3>
-      <h2>Limpeza com os Mais Altos Padrões de Qualidade</h2>
+      <h3 data-i18n="icons.section">Our Cleaning Services</h3>
+      <h2 data-i18n="icons.title">Cleaning with the Highest Quality Standards</h2>
       <div class="servicos-grid">
         <div class="servico-box">
           <img src="../images/cleaning-home.png" alt="Regular Cleaning" />
-          <p>Regular Cleaning</p>
+          <p data-i18n="icons.regular">Regular Cleaning</p>
         </div>
         <div class="servico-box">
           <img src="../images/dusting.png" alt="Dusting" />
-          <p>Dusting</p>
+          <p data-i18n="icons.dusting">Dusting</p>
         </div>
         <div class="servico-box">
           <img src="../images/vacuum.png" alt="Vacuuming" />
-          <p>Vacuuming</p>
+          <p data-i18n="icons.vacuum">Vacuuming</p>
         </div>
         <div class="servico-box">
           <img src="../images/mopping.png" alt="Mopping" />
-          <p>Mopping</p>
+          <p data-i18n="icons.mopping">Mopping</p>
         </div>
       </div>
     </section>
 
-    <!-- Faixa de cidades atendidas -->
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="testimonials-section">
+      <div class="testimonials-container">
+        <h2 class="testimonials-title" data-i18n="testimonials.title">What our customers say</h2>
+        <p class="testimonials-subtitle" data-i18n="testimonials.subtitle">
+          See what our clients say about our cleaning services.
+        </p>
+
+        <div class="rating-summary">
+          <strong data-i18n="testimonials.badge">Excellent</strong>
+          <span class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </span>
+          <span class="score">4,6</span>
+          <span class="count" data-i18n="testimonials.count">• 43 reviews</span>
+          <span class="brand">Google</span>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Mantive os textos dos cards como estão -->
+          <article class="testimonial-card">
+            <header class="t-head">
+              <div class="t-name">João Oliveira</div>
+              <div class="t-meta">49 avaliações • há 7 meses</div>
+              <div class="t-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </header>
+            <p class="t-text">
+              Contratei a Die Marias para o meu escritório e fiquei muito satisfeito.
+              Pontuais, atenciosas e o resultado impecável. Recomendo!
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <header class="t-head">
+              <div class="t-name">Sarah Silva</div>
+              <div class="t-meta">69 avaliações • há 8 meses</div>
+              <div class="t-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </header>
+            <p class="t-text">
+              Já utilizei os serviços várias vezes. Equipe educada, confiável e
+              cuidadosa com os detalhes. Excelente custo-benefício.
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <header class="t-head">
+              <div class="t-name">Joaquim Barros</div>
+              <div class="t-meta">9 avaliações • há 2 semanas</div>
+              <div class="t-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </header>
+            <p class="t-text">
+              Atendimento rápido e simpático. Solicitei limpeza profunda e tudo
+              ficou impecável. Ótima comunicação e organização.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Área atendida -->
     <section class="area-servico">
-      <h2>Atendemos atualmente</h2>
-      <p>
-        Berlim, Potsdam, Schönefeld, Oranienburg, Bernau, Teltow Stadt e todas as áreas vizinhas ao redor de Berlim.  
-        Em breve estaremos atendendo também outras cidades!
+      <h2 data-i18n="area.title">We currently serve</h2>
+      <p data-i18n="area.text">
+        Berlin, Potsdam, Schönefeld, Oranienburg, Bernau, Teltow Stadt and all neighboring areas around Berlin. More cities coming soon!
       </p>
     </section>
 
@@ -163,13 +268,14 @@
       <div class="footer-container">
         <p class="footer-copy">&copy; Die Marias – 2025</p>
         <div class="footer-social">
-          <span>Follow us</span>
+          <span data-i18n="footer.follow">Follow us</span>
           <a href="https://www.facebook.com/diemarias" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/die.marias?igsh=MWNwbG9pY3B5dTNwOA==" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://www.linkedin.com/company/diemarias" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </footer>
-<script src="../scripts/main.js" defer></script>
+
+    <script src="../scripts/main.js" defer></script>
   </body>
 </html>
