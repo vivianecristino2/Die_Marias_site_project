@@ -415,14 +415,14 @@ a:hover {
 #carousel { scrollbar-width: none; }
 
 
-#mensagem {
+#mensagem-porque {
   display: none;
   margin-top: 1rem;
   font-size: 1.1rem;
   color: var(--dark-blue);
 }
 
-#mensagem.mostrar {
+#mensagem-porque.mostrar {
   display: block;
 }
 
@@ -529,3 +529,123 @@ a:hover {
 @media (max-width: 600px) {
   .testimonials-grid { grid-template-columns: 1fr; }
 }
+
+/* Botão flutuante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* verde WhatsApp */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #20ba5a; /* tom mais escuro no hover */
+}
+
+/* Seção de formulário */
+.contact-form-section {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  margin-bottom: .5rem;
+}
+
+.contact-form-section p {
+  margin-bottom: 1.5rem;
+  opacity: .9;
+}
+
+/* Formulário */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: .4rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+/* Inputs e textarea – estilo unificado */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  background: #fff;
+  color: #222;
+}
+
+.form-group textarea {
+  min-height: 140px;      /* garante altura visível */
+  resize: vertical;       /* permite redimensionar */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9aa0a6;
+}
+
+/* Foco */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 4px rgba(28,102,169,.2);
+}
+
+/* Botão */
+.contact-form button {
+  align-self: flex-start;     /* fica alinhado à esquerda do form */
+  padding: .8rem 1.4rem;      /* deixa mais “clicável” */
+  font-weight: 700;
+}
+
+/* Mensagem de status (opcional) */
+#form-status {
+  font-size: .95rem;
+  margin-top: .5rem;
+}
+
+/* Responsivo: em telas menores, botão ocupa a largura toda */
+@media (max-width: 480px) {
+  .contact-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
+

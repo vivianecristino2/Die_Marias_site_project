@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/4917630330148" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
     <!-- HEADER -->
     <header style="background-color: var(--primary-blue); color: #fff; padding: 1rem 2rem; position: relative;">
       <div style="text-align: center; font-weight: bold;" data-i18n="tagline">
@@ -51,7 +55,7 @@
     <!-- Botão + mensagem -->
     <section style="max-width: 900px; margin: 2rem auto; text-align: center;">
       <button id="btn-porque" class="button-primary" data-i18n="about.whyBtn">Why choose Die Marias?</button>
-      <p id="mensagem" style="display:none;" data-i18n="about.whyMsg">
+      <p id="mensagem-porque" style="display:none;" data-i18n="about.whyMsg">
         🌟 We’re a team of determined women who care for your space with care, excellence and responsibility!
       </p>
     </section>
@@ -157,6 +161,35 @@
         <a href="https://wa.me/4917630330148" class="button-primary contact-btn" data-i18n="cta.whatsapp">WhatsApp</a>
       </div>
     </section>
+
+    
+<!-- Formulário de Contato -->
+<section id="form-contato" class="contact-form-section">
+  <h2 data-i18n="form.title">Envie uma mensagem</h2>
+  <p data-i18n="form.subtitle">Respondo o mais rápido possível 😊</p>
+
+  <form id="contact-form" class="contact-form">
+    <div class="form-group">
+      <label for="nome" data-i18n="form.name">Nome</label>
+      <input type="text" id="nome" name="from_name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email" data-i18n="form.email">E-mail</label>
+      <input type="email" id="email" name="from_email" required />
+    </div>
+
+    <div class="form-group">
+  <label for="mensagem-contato" data-i18n="form.message">Mensagem</label>
+  <textarea id="mensagem-contato" name="message" rows="6" placeholder="Digite sua mensagem aqui..." required></textarea>
+</div>
+
+
+    <button type="submit" class="button-primary" data-i18n="form.send">Enviar</button>
+    <p id="form-status" style="margin-top: .8rem;"></p>
+  </form>
+</section>
+
 
     <!-- Ícones de serviços -->
     <section class="servicos-icones">

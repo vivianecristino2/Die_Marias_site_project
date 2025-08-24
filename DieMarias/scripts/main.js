@@ -4,7 +4,7 @@
 
 // Mostrar/esconder mensagem “Por que…”
 const btnMensagem = document.getElementById("btn-porque");
-const mensagem = document.getElementById("mensagem");
+const mensagem = document.getElementById("mensagem-porque");
 if (btnMensagem && mensagem) {
   btnMensagem.addEventListener("click", () => {
     mensagem.style.display =
