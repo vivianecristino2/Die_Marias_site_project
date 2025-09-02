@@ -14,8 +14,49 @@
   font-size: 1.1rem;
   font-weight: bold;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.15);
 }
+/* Mantém o logo absoluto como já está */
+.header-logo{
+  position:absolute;
+  left:1rem;
+  top:50%;
+  transform:translateY(-50%);
+  height:56px;
+  width:auto;
+  border-radius:50%;
+}
+
+/* Empurra a frase para a direita */
+header [data-i18n="tagline"]{
+  display:block;
+  margin-left:88px;
+}
+@media (max-width:600px){
+  header [data-i18n="tagline"]{ margin-left:72px; }
+  .header-logo{ height:44px; left:.8rem; }
+}
+
+.dm-header{
+  background: var(--primary-blue);
+  color:#fff;
+  padding: 1rem 2rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.brand{ display:flex; align-items:center; gap:.75rem; min-width:0; }
+.header-logo{ height:48px; width:auto; border-radius:50%; }
+.brand-title{ font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.main-nav{ display:flex; align-items:center; gap:1.5rem; }
+.main-nav a{ color:#fff; text-decoration:none; font-weight:600; }
+.main-nav a:hover{ color: var(--highlight-yellow); }
+
+@media (max-width:720px){
+  .brand-title{ display:none; }
+}
+
 
 /* Fundo e textos */
 body {
@@ -34,7 +75,7 @@ body {
 }
 /* Header com imagem */
 .header-image {
-  background: url('../images/headerCleaningTeam.png') no-repeat center center;
+  background: url('../images/CleaningTeam31.png') no-repeat center center;
   background-size: contain;
   background-repeat: repeat;
   height: 450px;
@@ -65,7 +106,7 @@ body {
 }
 
 .frase-diemarias {
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   flex: 1;
 }
@@ -415,15 +456,14 @@ a:hover {
 #carousel { scrollbar-width: none; }
 
 
-#mensagem-porque {
-  display: none;
-  margin-top: 1rem;
+/* use isto no lugar */
+.why-text{
+  display: block;
+  margin: 1rem auto 2rem;
+  max-width: 900px;
+  text-align: center;
   font-size: 1.1rem;
   color: var(--dark-blue);
-}
-
-#mensagem-porque.mostrar {
-  display: block;
 }
 
   .language-selector{position:relative; z-index:1000}
@@ -646,6 +686,25 @@ a:hover {
   .contact-form button {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* Logo do header fixo à esquerda */
+.header-logo {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 56px;        /* ajuste conforme desejar */
+  width: auto;
+  border-radius: 50%;  /* opcional: combina com o seu selo redondo */
+}
+
+/* Responsivo: logo um pouco menor em telas pequenas */
+@media (max-width: 600px) {
+  .header-logo {
+    height: 44px;
+    left: 0.8rem;
   }
 }
 

@@ -2,17 +2,6 @@
    UI BÁSICO
 ============================= */
 
-// Mostrar/esconder mensagem “Por que…”
-const btnMensagem = document.getElementById("btn-porque");
-const mensagem = document.getElementById("mensagem-porque");
-if (btnMensagem && mensagem) {
-  btnMensagem.addEventListener("click", () => {
-    mensagem.style.display =
-      mensagem.style.display === "none" || !mensagem.style.display
-        ? "block"
-        : "none";
-  });
-}
 
 // Feedback de clique nos botões de contato
 document.querySelectorAll(".contact-btn").forEach((btn) => {
