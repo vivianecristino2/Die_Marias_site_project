@@ -73,18 +73,20 @@ body {
   object-fit: cover;   /* Cobre toda a área */
   display: block;
 }
-/* Header com imagem */
+
+
+/* Header com imagem — CORRIGIDO (wide, 1 imagem só) */
 .header-image {
-  background: url('../images/CleaningTeam31.png') no-repeat center center;
-  background-size: contain;
-  background-repeat: repeat;
-  height: 450px;
+  width: 100%;
+  min-height: clamp(280px, 42vw, 520px); /* altura responsiva */
+  background: url('../images/CleaningTeam313.png') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
 }
+
 
 .faixa-header-diemarias {
   background-color: var(--primary-blue);

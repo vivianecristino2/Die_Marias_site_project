@@ -3,6 +3,7 @@
 ============================= */
 
 
+
 // Feedback de clique nos botões de contato
 document.querySelectorAll(".contact-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -200,3 +201,11 @@ document.querySelectorAll("#language-options li").forEach((li) => {
     changeLanguage(lang);
   });
 });
+
+
+emailjs.init({
+  publicKey: 'SUA_PUBLIC_KEY', 
+});
+
+const EMAILJS_SERVICE_ID  = 'service_diemarias'; // o que você criou
+const EMAILJS_TEMPLATE_ID = 'template_xxxxxxx'; // do template
