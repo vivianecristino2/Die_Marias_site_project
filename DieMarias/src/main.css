@@ -710,3 +710,43 @@ a:hover {
   }
 }
 
+/* === Cards Missão / Visão / Valores === */
+.dm-cards { max-width: 1100px; margin: 2.5rem auto; padding: 0 1rem; }
+.dm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.dm-card {
+  background:#fff;
+  border-radius:14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  padding: 1.2rem 1.25rem 1.4rem;
+  border-top: 6px solid var(--primary-blue);
+}
+.dm-card:nth-child(2){ border-top-color: #31c48d; }   /* um verde suave */
+.dm-card:nth-child(3){ border-top-color: #e84a5f; }   /* um vermelho coral */
+
+.dm-card-icon {
+  display:inline-flex;
+  width:46px; height:46px;
+  align-items:center; justify-content:center;
+  border-radius:12px;
+  background: rgba(97,199,230,.18);
+  margin-bottom:.6rem;
+  font-size: 1.2rem; color: var(--dark-blue);
+}
+.dm-card h3{
+  margin:.2rem 0 .5rem;
+  font-size:1.3rem; font-weight:800; color: var(--dark-blue);
+}
+.dm-card p{ margin:0; line-height:1.6; }
+.dm-card-list{ margin:.25rem 0 0 1rem; padding:0; line-height:1.6; }
+.dm-card-list li{ margin:.25rem 0; }
+
+@media (max-width: 900px){
+  .dm-cards-grid{ grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px){
+  .dm-cards-grid{ grid-template-columns: 1fr; }
+}
