@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Die Marias – Deine Reinigungskraft</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- seu JS -->
+<script src="../scripts/main.js" defer></script>
+  <body>
+    <!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/4917630330148" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+    <!-- HEADER -->
+    <header style="background-color: var(--primary-blue); color: #fff; padding: 1rem 2rem; position: relative;">
+  <!-- LOGO à esquerda -->
+  <img src="../images/logo-diemarias.png"
+       alt="Die Marias – Deine Reinigungskraft"
+       class="header-logo" />
+
+  <div style="text-align: left; font-weight: bold;" data-i18n="tagline">
+    Die Marias – Your professional cleaning in good hands!
+  </div>
+
+      <nav style="position: absolute; top: 50%; right: 2rem; transform: translateY(-50%); display: flex; align-items: center; gap: 1.5rem;">
+        <a href="#sobre"    style="color: white; text-decoration: none;" data-i18n="nav.about">About</a>
+        <a href="#servicos" style="color: white; text-decoration: none;" data-i18n="nav.services">Services</a>
+        <a href="#contato"  style="color: white; text-decoration: none;" data-i18n="nav.contact">Contact</a>
+
+        <!-- Seletor de idioma -->
+        <div class="language-selector" style="position: relative;">
+          <button id="language-btn" style="background: white; color: black; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; cursor: pointer;">
+            EN <span style="margin-left: 5px;">▼</span>
+          </button>
+          <ul id="language-options" style="display:none; position:absolute; top:100%; right:0; background:white; color:black; list-style:none; margin:0; padding:0.5rem 0; box-shadow:0 2px 5px rgba(0,0,0,0.2); border-radius:5px;">
+            <li data-lang="en" style="padding:0.5rem 1rem; cursor:pointer;">EN</li>
+            <li data-lang="pt" style="padding:0.5rem 1rem; cursor:pointer;">PT</li>
+            <li data-lang="de" style="padding:0.5rem 1rem; cursor:pointer;">DE</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Imagem topo -->
+    <div class="header-image"></div>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
+      <h2 data-i18n="about.title">Cleaning you can trust!</h2>
+      <p data-i18n="about.text">
+        We make sure your workplaces are always clean, welcoming and hygienic — with reliability, dedication and tailored to your needs.
+      </p>
+      <span class="highlight" data-i18n="about.badge">Fair Prices & Flexible Hours</span>
+    </section>
+
+    <!-- mensagem -->
+<section id="mensagem-porque" style="max-width:900px; margin:2rem auto; padding:0 1rem; text-align:center;">
+  <h2 data-i18n="about.whyBtn" style="margin-bottom:.75rem;">Why choose Die Marias?</h2>
+
+  <p data-i18n="about.whyMsg">Somos um time de mulheres determinadas que cuida do seu espaço com carinho, excelência e responsabilidade.</p>
+
+  <section id="mvv" class="dm-cards">
+    <div class="dm-cards-grid">
+      <!-- Missão -->
+      <article class="dm-card">
+        <span class="dm-card-icon"><i class="fa-solid fa-bullseye"></i></span>
+        <h3 data-i18n="mission.title">Missão</h3>
+        <p data-i18n="mission.text">
+          Tornar cada ambiente mais saudável, acolhedor e produtivo com limpeza profissional de confiança, padrão consistente e atenção real aos detalhes.
+        </p>
+      </article>
+
+      <!-- Visão -->
+      <article class="dm-card">
+        <span class="dm-card-icon"><i class="fa-regular fa-eye"></i></span>
+        <h3 data-i18n="vision.title">Visão</h3>
+        <p data-i18n="vision.text">
+          Ser reconhecida como a melhor empresa de limpeza da região de Berlim/Brandemburgo, destacando-nos pela qualidade do serviço, profissionalismo da equipe e compromisso com a satisfação do cliente.
+        </p>
+      </article>
+
+      <!-- Valores -->
+      <article class="dm-card">
+        <span class="dm-card-icon"><i class="fa-solid fa-heart"></i></span>
+        <h3 data-i18n="values.title">Valores</h3>
+        <ul class="dm-card-list">
+          <li data-i18n="values.item1">Pontualidade e respeito à sua rotina</li>
+          <li data-i18n="values.item2">Transparência do orçamento à checagem final</li>
+          <li data-i18n="values.item3">Qualidade visível com checklists por área</li>
+          <li data-i18n="values.item4">Produtos adequados e sustentabilidade quando possível</li>
+          <li data-i18n="values.item5">Melhoria contínua por meio de treinamento</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <h2 data-i18n="company.title" style="margin:1.25rem 0 .4rem;">Die Marias</h2>
+
+  <p data-i18n="company.text1">
+    Você recebe uma equipe treinada e supervisionada para entregar o mesmo resultado em toda visita, um plano sob medida com checklist por área e frequência ideal, orçamento claro e sem fidelidade obrigatória, comunicação ágil em PT • EN • DE, materiais corretos para cada superfície evitando danos e prova social real.
+  </p>
+
+  <p data-i18n="company.text2">
+    <strong>Garantimos sua satisfação:</strong> se algo ficar fora do combinado, revisamos. Trabalhamos com agenda limitada por bairro para manter a qualidade, então reservar seu horário garante prioridade. Oferecemos orçamento gratuito com sugestões de manutenção do seu espaço e respondemos no mesmo dia pelo WhatsApp para você começar rápido e sem dor de cabeça.
+  </p>
+
+  <p data-i18n="company.text3">
+    <strong>Quer um ambiente impecável, sem preocupação?</strong> Fale com a Die Marias agora e receba um plano de limpeza personalizado em minutos.
+  </p>
+  
+</section>
+
+    <!-- Serviços com carrossel -->
+    <section id="servicos" class="faixa-servicos">
+      <div class="servicos-container">
+        <h2 style="text-align: center;" data-i18n="services.title">Our Services</h2>
+
+        <div class="carousel-wrapper">
+          <button class="arrow left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+          <div class="carousel" id="carousel">
+            <div class="carousel-item">
+              <img src="../images/escritorio.jpg" alt="Office" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.office.title">Office</strong><br>
+                <span data-i18n="services.office.subtitle">Productive Environment</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/consultorio.jpg" alt="Clinic" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.clinic.title">Clinics</strong><br>
+                <span data-i18n="services.clinic.subtitle">Impeccable Hygiene</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/padaria.jpg" alt="Bakery" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.bakery.title">Bakeries</strong><br>
+                <span data-i18n="services.bakery.subtitle">Daily Trust</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/restaurante.jpg" alt="Restaurant" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.restaurant.title">Restaurants</strong><br>
+                <span data-i18n="services.restaurant.subtitle">Safe Shine</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/comercio.jpg" alt="Retail" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.retail.title">Retail</strong><br>
+                <span data-i18n="services.retail.subtitle">First Impression</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/escadarias.jpg" alt="Staircases" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.stairs.title">Staircases</strong><br>
+                <span data-i18n="services.stairs.subtitle">Cared Details</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/limpezaaposreforma.jpg" alt="Post-renovation" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.postren.title">Post-renovation</strong><br>
+                <span data-i18n="services.postren.subtitle">Renewed Space</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/apartamento.jpg" alt="Apartments" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.apt.title">Apartments</strong><br>
+                <span data-i18n="services.apt.subtitle">Instant Comfort</span>
+              </p>
+            </div>
+
+            <div class="carousel-item">
+              <img src="../images/residencias.jpg" alt="Homes" class="carousel-img" />
+              <p class="carousel-caption">
+                <strong data-i18n="services.home.title">Homes</strong><br>
+                <span data-i18n="services.home.subtitle">Everyday Well-being</span>
+              </p>
+            </div>
+          </div>
+
+          <button class="arrow right" onclick="scrollCarousel(1)">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contato" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
+      <h2 id="contato-titulo" data-i18n="cta.title">Request your free consultation now!</h2>
+      <p>
+        <span style="color: #d63384; font-size: 1.2rem; margin-right: 0.5rem;">
+          <i class="fas fa-phone-alt pulse"></i>
+        </span>
+        <strong style="font-size: 1.1rem;">+49 176 30330148</strong>
+      </p>
+      <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+        <a href="mailto:kontakt@diemarias.de" class="button-primary contact-btn" data-i18n="cta.email">E‑mail</a>
+        <a href="https://wa.me/4917630330148" class="button-primary contact-btn" data-i18n="cta.whatsapp">WhatsApp</a>
+      </div>
+    </section>
+
+    
+<!-- Formulário de Contato -->
+<section id="form-contato" class="contact-form-section">
+  <h2 data-i18n="form.title">Envie uma mensagem</h2>
+  <p data-i18n="form.subtitle">Respondo o mais rápido possível 😊</p>
+
+  <form id="contact-form" class="contact-form">
+    <div class="form-group">
+      <label for="nome" data-i18n="form.name">Nome</label>
+      <input type="text" id="nome" name="from_name" required 
+             data-i18n-placeholder="form.name.placeholder" 
+             placeholder="Digite seu nome" />
+    </div>
+
+    <div class="form-group">
+      <label for="email" data-i18n="form.email">E-mail</label>
+      <input type="email" id="email" name="from_email" required 
+             data-i18n-placeholder="form.email.placeholder" 
+             placeholder="Digite seu e-mail" />
+    </div>
+
+    <div class="form-group">
+      <label for="mensagem-contato" data-i18n="form.message">Mensagem</label>
+      <textarea id="mensagem-contato" name="message" rows="6" required
+                data-i18n-placeholder="form.message.placeholder"
+                placeholder="Digite sua mensagem aqui..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="telefone" data-i18n="form.phone">Telefone</label>
+      <input type="tel" id="telefone" name="phone"
+             data-i18n-placeholder="form.phone.placeholder"
+             placeholder="Digite seu telefone" />
+    </div>
+
+    <div class="form-group">
+      <label for="canal" data-i18n="form.channel">Como ficou sabendo da Die Marias?</label>
+      <select id="canal" name="channel" required>
+        <option value="" selected disabled data-i18n="form.channel.select">Selecione…</option>
+        <option data-i18n="form.channel.facebook">Facebook</option>
+        <option data-i18n="form.channel.instagram">Instagram</option>
+        <option data-i18n="form.channel.linkedin">LinkedIn</option>
+        <option data-i18n="form.channel.tiktok">TikTok</option>
+        <option data-i18n="form.channel.google">Google</option>
+        <option data-i18n="form.channel.indication">Indicação</option>
+        <option data-i18n="form.channel.event">Evento</option>
+        <option data-i18n="form.channel.other">Outros</option>
+      </select>
+    </div>
+
+    <button type="submit" class="button-primary" 
+            data-i18n="form.send" 
+            data-i18n-value="form.send">
+      Enviar
+    </button>
+    <p id="form-status" style="margin-top: .8rem;"></p>
+  </form>
+</section>
+
+
+<!-- UTM/referrer (preenchidos via JS) -->
+<input type="hidden" id="utm_source"   name="utm_source">
+<input type="hidden" id="utm_medium"   name="utm_medium">
+<input type="hidden" id="utm_campaign" name="utm_campaign">
+<input type="hidden" id="referrer"     name="referrer">
+</section>
+
+
+    <!-- Ícones de serviços -->
+    <section class="servicos-icones">
+      <h3 data-i18n="icons.section">Our Cleaning Services</h3>
+      <h2 data-i18n="icons.title">Cleaning with the Highest Quality Standards</h2>
+      <div class="servicos-grid">
+        <div class="servico-box">
+          <img src="../images/cleaning-home.png" alt="Regular Cleaning" />
+          <p data-i18n="icons.regular">Regular Cleaning</p>
+        </div>
+        <div class="servico-box">
+          <img src="../images/dusting.png" alt="Dusting" />
+          <p data-i18n="icons.dusting">Dusting</p>
+        </div>
+        <div class="servico-box">
+          <img src="../images/vacuum.png" alt="Vacuuming" />
+          <p data-i18n="icons.vacuum">Vacuuming</p>
+        </div>
+        <div class="servico-box">
+          <img src="../images/mopping.png" alt="Mopping" />
+          <p data-i18n="icons.mopping">Mopping</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+<section id="depoimentos" class="testimonials-section">
+  <div class="testimonials-container">
+    <h2 class="testimonials-title" data-i18n="testimonials.title">What our customers say</h2>
+    <p class="testimonials-subtitle" data-i18n="testimonials.subtitle">
+      See what our clients say about our cleaning services.
+    </p>
+
+    <div class="rating-summary">
+      <strong data-i18n="testimonials.badge">Excellent</strong>
+      <span class="stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+      </span>
+      <span class="score">4,6</span>
+      <span class="count" data-i18n="testimonials.count">• 43 reviews</span>
+      <span class="brand">Google</span>
+    </div>
+
+    <div class="testimonials-grid">
+      <article class="testimonial-card">
+        <header class="t-head">
+          <div class="t-name">Desere Helo Proprietária da Padoka Padaria</div>
+          <div class="t-meta">49 avaliações • há 7 meses</div>
+          <div class="t-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </header>
+        <p class="t-text" data-i18n="testimonials.review1">
+          Contratei a Die Marias para o meu escritório e fiquei muito satisfeita...
+        </p>
+      </article>
+
+      <article class="testimonial-card">
+        <header class="t-head">
+          <div class="t-name">Seep Manager Company</div>
+          <div class="t-meta">69 avaliações • há 8 meses</div>
+          <div class="t-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </header>
+        <p class="t-text" data-i18n="testimonials.review2">
+          Estamos super felizes com a Colaboradora Viviane, ela está fazendo um ótimo trabalho...
+        </p>
+      </article>
+
+      <article class="testimonial-card">
+        <header class="t-head">
+          <div class="t-name">Joaquim Barros</div>
+          <div class="t-meta">9 avaliações • há 2 semanas</div>
+          <div class="t-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </header>
+        <p class="t-text" data-i18n="testimonials.review3">
+          Atendimento rápido e simpático. Solicitei limpeza profunda e tudo ficou impecável...
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Área atendida -->
+    <section class="area-servico">
+      <h2 data-i18n="area.title">We currently serve</h2>
+      <p data-i18n="area.text">
+        Berlin, Potsdam, Schönefeld, Oranienburg, Bernau, Teltow Stadt and all neighboring areas around Berlin. More cities coming soon!
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-diemarias">
+      <div class="footer-container">
+        <p class="footer-copy">&copy; Die Marias – 2025</p>
+        <div class="footer-social">
+          <span data-i18n="footer.follow">Follow us</span>
+          <a href="https://www.facebook.com/diemarias" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/die.marias?igsh=MWNwbG9pY3B5dTNwOA==" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/diemarias" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../scripts/main.js" defer></script>
+  </body>
+</html>
