@@ -750,3 +750,124 @@ a:hover {
 @media (max-width: 600px){
   .dm-cards-grid{ grid-template-columns: 1fr; }
 }
+
+/* ===== MENU NAV ===== */
+.main-nav {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  display: none; /* só no mobile */
+  z-index: 1001;
+}
+
+/* Links desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--highlight-yellow);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-blue);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    animation: slideDown 0.3s ease forwards;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0.6rem 0;
+  }
+  .nav-links a {
+    color: white;
+  }
+  .nav-links a:hover {
+    color: var(--highlight-yellow);
+  }
+
+  /* dropdown do idioma dentro do menu */
+  .language-selector button {
+    background: white;
+    color: var(--dark-blue);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+  .language-selector ul {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .language-selector li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .language-selector li:hover {
+    background: #f0f0f0;
+  }
+}
+
+/* animação suave */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Força cor dos itens do dropdown de idioma */
+.language-selector ul {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.language-selector li {
+  color: black !important;   /* <-- garante contraste */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.language-selector li:hover {
+  background-color: #f0f0f0;
+}

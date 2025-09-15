@@ -29,25 +29,35 @@
 
   <div style="text-align: left; font-weight: bold;" data-i18n="tagline">
     Die Marias – Your professional cleaning in good hands!
+
   </div>
+      
+      <nav class="main-nav">
+  <!-- Botão hambúrguer -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
 
-      <nav style="position: absolute; top: 50%; right: 2rem; transform: translateY(-50%); display: flex; align-items: center; gap: 1.5rem;">
-        <a href="#sobre"    style="color: white; text-decoration: none;" data-i18n="nav.about">About</a>
-        <a href="#servicos" style="color: white; text-decoration: none;" data-i18n="nav.services">Services</a>
-        <a href="#contato"  style="color: white; text-decoration: none;" data-i18n="nav.contact">Contact</a>
+  <!-- Links normais -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#sobre" data-i18n="nav.about">About</a></li>
+    <li><a href="#servicos" data-i18n="nav.services">Services</a></li>
+    <li><a href="#contato" data-i18n="nav.contact">Contact</a></li>
+  </ul>
 
-        <!-- Seletor de idioma -->
-        <div class="language-selector" style="position: relative;">
-          <button id="language-btn" style="background: white; color: black; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; cursor: pointer;">
-            EN <span style="margin-left: 5px;">▼</span>
-          </button>
-          <ul id="language-options" style="display:none; position:absolute; top:100%; right:0; background:white; color:black; list-style:none; margin:0; padding:0.5rem 0; box-shadow:0 2px 5px rgba(0,0,0,0.2); border-radius:5px;">
-            <li data-lang="en" style="padding:0.5rem 1rem; cursor:pointer;">EN</li>
-            <li data-lang="pt" style="padding:0.5rem 1rem; cursor:pointer;">PT</li>
-            <li data-lang="de" style="padding:0.5rem 1rem; cursor:pointer;">DE</li>
-          </ul>
-        </div>
-      </nav>
+  <!-- Seletor de idioma sempre fora -->
+  <div class="language-selector">
+    <button id="language-btn">
+      EN <span class="arrow-down">▼</span>
+    </button>
+    <ul id="language-options" class="language-dropdown">
+      <li data-lang="en">EN</li>
+      <li data-lang="pt">PT</li>
+      <li data-lang="de">DE</li>
+    </ul>
+  </div>
+</nav>
+
     </header>
 
     <!-- Imagem topo -->
