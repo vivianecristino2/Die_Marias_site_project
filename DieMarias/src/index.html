@@ -21,48 +21,45 @@
   <i class="fab fa-whatsapp"></i>
 </a>
     <!-- HEADER -->
-    <header style="background-color: var(--primary-blue); color: #fff; padding: 1rem 2rem; position: relative;">
-  <!-- LOGO à esquerda -->
+    <header class="dm-header">
   <img src="../images/logo-diemarias.png"
        alt="Die Marias – Deine Reinigungskraft"
        class="header-logo" />
 
-  <div style="text-align: left; font-weight: bold;" data-i18n="tagline">
-    Die Marias – Your professional cleaning in good hands!
-
-  </div>
-      
-      <nav class="main-nav">
-  <!-- Botão hambúrguer -->
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <i class="fas fa-bars"></i>
-  </button>
-
-  <!-- Links normais -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#sobre" data-i18n="nav.about">About</a></li>
-    <li><a href="#servicos" data-i18n="nav.services">Services</a></li>
-    <li><a href="#contato" data-i18n="nav.contact">Contact</a></li>
-  </ul>
-
-  <!-- Seletor de idioma sempre fora -->
-  <div class="language-selector">
-    <button id="language-btn">
-      EN <span class="arrow-down">▼</span>
-    </button>
-    <ul id="language-options" class="language-dropdown">
-      <li data-lang="en">EN</li>
-      <li data-lang="pt">PT</li>
-      <li data-lang="de">DE</li>
+  <nav class="main-nav">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#sobre" data-i18n="nav.about">About</a></li>
+      <li><a href="#servicos" data-i18n="nav.services">Services</a></li>
+      <li><a href="#contato" data-i18n="nav.contact">Contact</a></li>
     </ul>
-  </div>
-</nav>
 
-    </header>
+    <!-- botão hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- seletor de idioma -->
+    <div class="language-selector">
+      <button id="language-btn">EN <span class="arrow-down">▼</span></button>
+      <ul id="language-options" class="language-dropdown">
+        <li data-lang="en">EN</li>
+        <li data-lang="pt">PT</li>
+        <li data-lang="de">DE</li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
 
     <!-- Imagem topo -->
-    <div class="header-image"></div>
-
+   <div class="header-image">
+  <div class="header-text">
+    Die Marias <br>
+    Your professional cleaning in good hands!
+  </div>
+</div>
     <!-- Seção Sobre -->
     <section id="sobre" style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; text-align: center;">
       <h2 data-i18n="about.title">Cleaning you can trust!</h2>

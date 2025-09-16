@@ -524,15 +524,11 @@ window.playHeroAnimation = function () {
 };
 
 // Dispara no carregamento
-document.addEventListener("DOMContentLoaded", () => {
-  window.playHeroAnimation();
-});
-
+// Menu hambúrguer
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-}
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
