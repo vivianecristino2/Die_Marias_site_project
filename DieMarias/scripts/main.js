@@ -60,7 +60,7 @@ if (langBtn && langOptions) {
 const I18N = {
   en: {
     // HEADER
-    "tagline": "✨ Die Marias – Your professional cleaning in good hands!",
+    "tagline": "✨Die Marias Your professional cleaning in good hands!",
     "nav.about": "About",
     "nav.services": "Services",
     "nav.contact": "Contact",
@@ -155,7 +155,7 @@ const I18N = {
     "testimonials.review1": "I hired Die Marias for my office and was very satisfied. Punctual, attentive, and flawless results. My family is delighted. The women working are dedicated, responsible, collaborative, and detail-oriented. I love cleaning day because it feels like a beautiful encounter. With small children, I need help when family isn't around — and I found that in your team. It’s a big expense, but now we see it as necessary. We are very grateful.",
     "testimonials.review2": "We are super happy with Viviane, she's doing a great job. We'll now continue with the bi-weekly appointments.",
     "testimonials.review3": "Fast and friendly service. I requested a deep cleaning and everything was spotless. Great communication and organization.",
-
+    "testimonials.leaveReview": "⭐ Leave your review on Google",
     // ÁREA ATENDIDA
     "area.title": "We currently serve",
     "area.text": "Berlin, Potsdam, Schönefeld, Oranienburg, Bernau, Teltow Stadt and all neighboring areas around Berlin. More cities coming soon!",
@@ -165,7 +165,7 @@ const I18N = {
   },
 
   pt: {
-    "tagline": "✨ Die Marias – Sua limpeza profissional em boas mãos!",
+    "tagline": "✨Die Marias Sua limpeza profissional em boas mãos!",
     "nav.about": "Sobre",
     "nav.services": "Serviços",
     "nav.contact": "Contato",
@@ -252,6 +252,7 @@ const I18N = {
     "testimonials.review1": "Contratei a Die Marias para o meu escritório e fiquei muito satisfeita. Pontuais, atenciosas e o resultado impecável. Recomendo! Minha família está encantada. As mulheres que trabalham são muito dedicadas ao seu trabalho, responsáveis, colaborativas e detalhistas. Amo o dia de limpeza porque minha casa é o dia do encontro bonito. Com crianças pequenas, é necessário que eu tenha uma ajuda quando a família não estiver. E foi isso que eu descobri com você. É uma despesa grande, mas agora a vemos como necessária. Estamos muito gratos.",
     "testimonials.review2": "Estamos super felizes com a Colaboradora Viviane, ela está fazendo um ótimo trabalho. Podemos agora continuar com o agendamento a cada 2 semanas.",
     "testimonials.review3": "Atendimento rápido e simpático. Solicitei limpeza profunda e tudo ficou impecável. Ótima comunicação e organização.",
+    "testimonials.leaveReview": "⭐ Deixe sua avaliação no Google",
 
     "area.title": "Atendemos atualmente",
     "area.text": "Berlim, Potsdam, Schönefeld, Oranienburg, Bernau, Teltow Stadt e áreas vizinhas de Berlim. Em breve mais cidades!",
@@ -260,7 +261,7 @@ const I18N = {
   },
 
   de: {
-    "tagline": "✨ Die Marias – Ihre professionelle Reinigung in guten Händen!",
+    "tagline": "✨Die Marias Ihre professionelle Reinigung in guten Händen!",
     "nav.about": "Über uns",
     "nav.services": "Leistungen",
     "nav.contact": "Kontakt",
@@ -347,7 +348,7 @@ const I18N = {
     "testimonials.review1": "Ich habe Die Marias für mein Büro engagiert und war sehr zufrieden. Pünktlich, aufmerksam und makellose Ergebnisse. Meine Familie ist begeistert. Die Frauen sind engagiert, verantwortungsbewusst, kooperativ und sehr genau. Ich liebe den Reinigungstag, denn mein Zuhause fühlt sich dann besonders schön an. Mit kleinen Kindern brauche ich Hilfe, wenn die Familie nicht da ist – und genau das habe ich bei euch gefunden. Es ist eine große Ausgabe, aber jetzt sehen wir es als notwendig an. Wir sind sehr dankbar.",
     "testimonials.review2": "Wir sind sehr zufrieden mit Viviane, sie macht einen tollen Job. Wir machen jetzt mit den Terminen alle zwei Wochen weiter.",
     "testimonials.review3": "Schneller und freundlicher Service. Ich habe eine Tiefenreinigung angefordert und alles war perfekt. Tolle Kommunikation und Organisation.",
-
+    "testimonials.leaveReview": "⭐ Hinterlassen Sie Ihre Bewertung auf Google",
     "area.title": "Wir sind derzeit aktiv in",
     "area.text": "Berlin, Potsdam, Schönefeld, Oranienburg, Bernau, Teltow Stadt und alle angrenzenden Gebiete rund um Berlin. Weitere Städte folgen!",
 
@@ -529,6 +530,6 @@ const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
 hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+  navLinks.classList.toggle("active");
 });
 

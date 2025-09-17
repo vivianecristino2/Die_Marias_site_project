@@ -26,29 +26,32 @@
        alt="Die Marias – Deine Reinigungskraft"
        class="header-logo" />
 
-  <nav class="main-nav">
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#sobre" data-i18n="nav.about">About</a></li>
-      <li><a href="#servicos" data-i18n="nav.services">Services</a></li>
-      <li><a href="#contato" data-i18n="nav.contact">Contact</a></li>
+<nav class="main-nav">
+  <!-- Links dentro do menu -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+    <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+  </ul>
+
+  <!-- botão hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- seletor de idioma fixo -->
+  <div class="language-selector">
+    <button id="language-btn">PT <span class="arrow-down">▼</span></button>
+    <ul id="language-options" class="language-dropdown">
+      <li data-lang="en">EN</li>
+      <li data-lang="pt">PT</li>
+      <li data-lang="de">DE</li>
     </ul>
+  </div>
+</nav>
 
-    <!-- botão hambúrguer -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- seletor de idioma -->
-    <div class="language-selector">
-      <button id="language-btn">EN <span class="arrow-down">▼</span></button>
-      <ul id="language-options" class="language-dropdown">
-        <li data-lang="en">EN</li>
-        <li data-lang="pt">PT</li>
-        <li data-lang="de">DE</li>
-      </ul>
-    </div>
   </nav>
 </header>
 
@@ -335,16 +338,26 @@
         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star-half-stroke"></i>
       </span>
-      <span class="score">4,6</span>
-      <span class="count" data-i18n="testimonials.count">• 43 reviews</span>
+      <span class="score">5,0</span>
+      <span class="count" data-i18n="testimonials.count">• 3 reviews</span>
       <span class="brand">Google</span>
+    </div>
+
+    <!-- Botão Avaliação Google -->
+    <div style="text-align:center; margin:1rem 0;">
+      <a href="https://www.google.com/maps/place/Die+Marias-+Reinigungsservice/@52.5068441,13.4247317,10z/data=!4m6!3m5!1s0xfa512dbc3872f09:0x63f59904e6b06de2!8m2!3d52.5068441!4d13.4247318!16s%2Fg%2F11x8d3fl0t?entry=ttu" 
+         target="_blank" 
+         class="button-primary" 
+         data-i18n="testimonials.leaveReview">
+         ⭐ Leave your review on Google
+      </a>
     </div>
 
     <div class="testimonials-grid">
       <article class="testimonial-card">
         <header class="t-head">
-          <div class="t-name">Desere Helo Proprietária da Padoka Padaria</div>
-          <div class="t-meta">49 avaliações • há 7 meses</div>
+          <div class="t-name">Desere Helo</div>
+          <div class="t-meta">2 avaliações • há 2 meses</div>
           <div class="t-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -359,11 +372,11 @@
       <article class="testimonial-card">
         <header class="t-head">
           <div class="t-name">Seep Manager Company</div>
-          <div class="t-meta">69 avaliações • há 8 meses</div>
+          <div class="t-meta">10 avaliações • há 3 meses</div>
           <div class="t-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
         </header>
         <p class="t-text" data-i18n="testimonials.review2">
@@ -374,7 +387,7 @@
       <article class="testimonial-card">
         <header class="t-head">
           <div class="t-name">Joaquim Barros</div>
-          <div class="t-meta">9 avaliações • há 2 semanas</div>
+          <div class="t-meta">5 avaliações • há 2 semanas</div>
           <div class="t-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>

@@ -144,22 +144,49 @@ body {
 }
 
 
+/* HERO / imagem de topo */
+.header-image{
+  width: 100%;
+  min-height: clamp(320px, 42vw, 520px);
+  background: url('../images/CleaningTeam313.png') center center / cover no-repeat;
+  display: block;               /* não precisa do flex já que usaremos absolute */
+  position: relative;           /* 🔹 AGORA o .header-text passa a ser relativo ao HERO */
+  overflow: hidden;             /* 🔹 corta qualquer sobra do texto */
+}
+
+/* Texto do hero – desktop */
+/* Desktop */
 .header-text {
   position: absolute;
-  top: 25%;          
-  left: 5%;          
-  max-width: 350px;  
-  color: white;
-  font-weight: bold;
-  font-size: 1.6rem;   /* 🔹 menor que 2rem */
+  z-index: 2;
+  color: #fff;
+  font-weight: 700;
   line-height: 1.3;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 6px rgba(0,0,0,.6);
+
+  top: 58%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  max-width: 360px;
+  font-size: 1.6rem;
 
   opacity: 0;
-  transform: translateY(-40px);
   animation: slideDown 1.2s ease-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: .5s;
 }
+
+/* Mobile */
+@media (max-width: 768px){
+  .header-text{
+    top: 70%;              /* 🔹 desce mais para perto da mão/luva */
+    left: 10%;             /* centraliza no meio */
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
 
 
 @keyframes slideDown {
@@ -892,22 +919,52 @@ a:hover {
 }
 
 /* Links desktop */
+/* desktop */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0;
-  padding: 0;
 }
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
-.nav-links a:hover {
-  color: var(--highlight-yellow);
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
 }
+
+/* mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* escondido por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* abaixo do header */
+    right: 1rem;
+    background: var(--primary-blue);
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  .nav-links.active {
+    display: flex;  /* abre ao clicar */
+  }
+
+  .hamburger {
+    display: flex; /* mostra o botão */
+  }
+
+  /* idioma continua fixo */
+  .language-selector {
+    margin-left: 1rem;
+  }
+}
+
 
   /* dropdown do idioma dentro do menu */
   .language-selector button {
